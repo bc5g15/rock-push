@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-export (int) var speed = 200
-export (float) var maxTimer = 0.5
+export (int) var speed = 100
+export (float) var maxTimer = 0.3
 var currentTimer = maxTimer
 var pushing = false
 var direction = ""
