@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Prefabs/Walls.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/Hole.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Obstructions.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Rock.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/DoorLR.tscn" type="PackedScene" id=6]
+[ext_resource path="res://TopScripts/PlayerFollow.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/LevelExit.tscn" type="PackedScene" id=8]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Walls" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 262169, 6, 0, 327690, 0, 0, 327692, 5, 0, 327693, 5, 0, 327694, 5, 0, 327695, 5, 0, 327696, 5, 0, 327697, 5, 0, 327698, 5, 0, 327699, 5, 0, 327700, 5, 0, 327701, 5, 0, 327702, 5, 0, 327703, 1, 0, 327705, 6, 0, 327707, 5, 0, 327708, 5, 0, 327709, 5, 0, 327710, 5, 0, 327711, 5, 0, 327712, 5, 0, 327713, 5, 0, 327714, 5, 0, 327715, 5, 0, 327716, 5, 0, 327717, 5, 0, 327718, 5, 0, 327719, 5, 0, 327720, 5, 0, 327721, 5, 0, 327722, 1, 0, 327724, 0, 0, 327731, 1, 0, 393241, 6, 0, 458762, 6, 0, 458764, 9, 65538, 458765, 9, 65538, 458766, 9, 65538, 458767, 9, 65538, 458768, 9, 65538, 458769, 9, 65538, 458770, 9, 65538, 458771, 9, 65537, 458772, 9, 65538, 458773, 9, 65538, 458774, 9, 65538, 458775, 7, 0, 458777, 6, 0, 458794, 7, 0, 458796, 6, 0, 458803, 7, 0, 524298, 6, 0, 524300, 9, 65538, 524301, 9, 65538, 524302, 9, 65538, 524303, 9, 65538, 524304, 9, 65538, 524305, 9, 65538, 524306, 9, 65538, 524307, 9, 65538, 524308, 9, 65538, 524309, 9, 65538, 524310, 9, 65538, 524311, 7, 0, 524313, 6, 0, 524330, 7, 0, 524332, 6, 0, 524339, 7, 0, 589834, 6, 0, 589836, 9, 65538, 589837, 9, 65538, 589838, 9, 65538, 589839, 9, 65538, 589840, 9, 65538, 589841, 9, 65538, 589842, 9, 65538, 589843, 9, 65538, 589844, 9, 65538, 589845, 9, 65538, 589846, 9, 65538, 589875, 7, 0, 655370, 6, 0, 655372, 9, 65538, 655373, 9, 65538, 655374, 9, 65538, 655375, 9, 65538, 655376, 9, 65538, 655377, 9, 65538, 655378, 9, 65538, 655379, 9, 65538, 655380, 9, 65538, 655381, 9, 65538, 655382, 9, 65538, 655411, 7, 0, 720906, 6, 0, 720908, 9, 65538, 720909, 9, 65538, 720910, 9, 65538, 720911, 9, 65538, 720912, 9, 65538, 720913, 9, 65538, 720914, 9, 65538, 720915, 9, 65538, 720916, 9, 65538, 720917, 9, 65538, 720918, 9, 65538, 720947, 7, 0, 786442, 6, 0, 786444, 9, 65538, 786445, 9, 65538, 786446, 9, 65538, 786447, 9, 65538, 786448, 9, 65538, 786449, 9, 65538, 786450, 9, 65538, 786451, 9, 65538, 786452, 9, 65538, 786453, 9, 65538, 786454, 9, 65538, 786455, 7, 0, 786457, 6, 0, 786474, 7, 0, 786476, 2, 0, 786478, 8, 0, 786479, 8, 0, 786480, 8, 0, 786481, 8, 0, 786482, 8, 0, 786483, 3, 0, 851978, 6, 0, 851980, 9, 65538, 851981, 9, 65538, 851982, 9, 65538, 851983, 9, 65538, 851984, 9, 65538, 851985, 9, 65538, 851986, 9, 65538, 851987, 9, 65538, 851988, 9, 65538, 851989, 9, 65538, 851990, 9, 65538, 851991, 7, 0, 851993, 6, 0, 852010, 7, 0, 917514, 2, 0, 917516, 8, 0, 917517, 8, 0, 917518, 8, 0, 917519, 8, 0, 917520, 8, 0, 917521, 8, 0, 917522, 8, 0, 917523, 8, 0, 917524, 8, 0, 917525, 8, 0, 917526, 8, 0, 917527, 3, 0, 917529, 6, 0, 917531, 8, 0, 917532, 8, 0, 917533, 8, 0, 917534, 8, 0, 917535, 8, 0, 917536, 8, 0, 917537, 8, 0, 917538, 8, 0, 917539, 8, 0, 917540, 8, 0, 917541, 8, 0, 917542, 8, 0, 917543, 8, 0, 917544, 8, 0, 917545, 8, 0, 983065, 6, 0, 1048601, 6, 0 )
+
+[node name="Holes" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hole" parent="Holes" instance=ExtResource( 2 )]
+position = Vector2( 464, 160 )
+
+[node name="Hole2" parent="Holes" instance=ExtResource( 2 )]
+position = Vector2( 640, 160 )
+
+[node name="Hole4" parent="Holes" instance=ExtResource( 2 )]
+position = Vector2( 768, 160 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 256, 152 )
+
+[node name="Obstructions" parent="." instance=ExtResource( 4 )]
+tile_data = PoolIntArray( 458787, 0, 0, 524320, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589859, 0, 0, 589863, 0, 0, 589864, 0, 0, 589865, 0, 0, 655393, 0, 0, 720916, 0, 0, 720917, 0, 0, 720918, 0, 0, 720936, 0, 0, 720937, 0, 0, 786466, 0, 0 )
+
+[node name="Rocks" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Rock" parent="Rocks" instance=ExtResource( 5 )]
+position = Vector2( 320, 160 )
+
+[node name="Rock2" parent="Rocks" instance=ExtResource( 5 )]
+position = Vector2( 640, 128 )
+
+[node name="Rock3" parent="Rocks" instance=ExtResource( 5 )]
+position = Vector2( 640, 192 )
+
+[node name="Doors" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="DoorLR" parent="Doors" instance=ExtResource( 6 )]
+position = Vector2( 368, 144 )
+
+[node name="DoorLR2" parent="Doors" instance=ExtResource( 6 )]
+position = Vector2( 672, 144 )
+
+[node name="LevelExit" parent="." instance=ExtResource( 8 )]
+position = Vector2( 736, 64 )
+path = "Levels/1-2"
