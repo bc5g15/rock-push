@@ -42,7 +42,7 @@ func _physics_process(delta):
 	var new_velocity = move_and_slide(velocity)
 	var cols = get_slide_count()
 	animate(velocity, cols)
-	if cols > 0 && pushing:
+	if cols > 0 && pushing && new_velocity == Vector2.ZERO:
 		currentTimer -= delta
 		if currentTimer <= 0:
 			var collisionObject = get_slide_collision(0).collider
