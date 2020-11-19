@@ -55,7 +55,7 @@ position = Vector2( 48, 128 )
 rotation = 1.5708
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 32, 24 )
+position = Vector2( 32, 32 )
 
 [node name="LevelExit" parent="." instance=ExtResource( 2 )]
 position = Vector2( 32, 64 )
