@@ -36,6 +36,9 @@ func get_input():
 		if Input.is_action_just_pressed("ui_accept"):
 			# Toggle collider
 			collider.disabled = !collider.disabled
+	
+	if Input.is_action_pressed('reset'):
+		Global.reset_current_scene()
 
 func _physics_process(delta):
 	get_input()
