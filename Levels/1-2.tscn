@@ -44,4 +44,4 @@ position = Vector2( 192, 80 )
 
 [node name="LevelExit" parent="." instance=ExtResource( 2 )]
 position = Vector2( 128, 0 )
-path = "Debug"
+path = "Levels/1-3"
