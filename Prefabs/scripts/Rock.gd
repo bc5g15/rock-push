@@ -40,7 +40,7 @@ func _physics_process(delta):
 			print("Hit a Rock!")
 			collision.collider.call("rockPush", velocity)
 		velocity = Vector2.ZERO
-#		reposition()
+		reposition()
 			
 
 func on_hole(_area):
@@ -51,16 +51,18 @@ func _on_DoorCollide_fall_in_hole():
 	self.queue_free()
 	pass # Replace with function body.
 
-#func grid_snap(pos):
-#	var bySixteen = pos % 8
-#	var smaller = bySixteen < 4
-#	var larger = bySixteen >= 4
-#	var value = (pos / 16) * 16
-#	return (smaller * (value - 16)) + (larger * value)
+func grid_snap(pos):
+	var bySixteen = pos / 16
+	var rounded = round(bySixteen)
+	return rounded * 16
 #
-#func reposition():
-#	var current = transform.get_origin()
-#	current.x = grid_snap(current.x)
-#	current.y = grid_snap(current.y)
-#	transform.origin = current
+func reposition():
+	var current = transform.get_origin()
+	current.x = grid_snap(current.x)
+	current.y = grid_snap(current.y)
+	transform.origin = current
 
+func _on_DoorCollide_turned(vector):
+	reposition()
+	velocity = vector.normalized() * velocity.length()
+	pass # Replace with function body.

@@ -2,6 +2,7 @@ extends Area2D
 
 signal fall_in_hole
 signal hit_by_rock
+signal turned
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -21,3 +22,6 @@ func on_hole():
 
 func on_rock(velocity):
 	emit_signal("hit_by_rock", velocity)
+
+func on_turn(vector):
+	emit_signal('turned', vector)

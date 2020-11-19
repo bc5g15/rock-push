@@ -33,3 +33,4 @@ script = ExtResource( 3 )
 shape = SubResource( 2 )
 [connection signal="fall_in_hole" from="DoorCollide" to="." method="_on_DoorCollide_fall_in_hole"]
 [connection signal="hit_by_rock" from="DoorCollide" to="." method="_on_hit_by_rock"]
+[connection signal="turned" from="DoorCollide" to="." method="_on_DoorCollide_turned"]
