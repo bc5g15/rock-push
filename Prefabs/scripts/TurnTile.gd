@@ -34,10 +34,10 @@ func switchOn(vector):
 	cooldown = maxCooldown
 
 func _on_Edge1_area_entered(_area):
-	switchOn(edge2.transform.origin - center.transform.origin)
+	switchOn(to_global(edge2.transform.origin) - to_global(center.transform.origin))
 
 func _on_Edge2_area_entered(_area):
-	switchOn(edge1.transform.origin - center.transform.origin)
+	switchOn(to_global(edge1.transform.origin) - to_global(center.transform.origin))
 
 func _on_Center_area_entered(area):
 	if tripped && area.has_method('on_turn'):
