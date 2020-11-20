@@ -1,17 +1,16 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/SmallerRock.png" type="Texture" id=1]
+[ext_resource path="res://Assets/SmallestRock2.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/scripts/Rock.gd" type="Script" id=2]
 [ext_resource path="res://Prefabs/scripts/RockObjCollide.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 14, 14 )
+extents = Vector2( 7, 7 )
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 8.0
+radius = 4.0
 
 [node name="Rock" type="KinematicBody2D"]
-scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 2 )
 speed = 150
 
@@ -20,11 +19,11 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 8, 8 )
 shape = SubResource( 1 )
 
 [node name="DoorCollide" type="Area2D" parent="."]
-position = Vector2( 16, 16 )
+position = Vector2( 8, 8 )
 collision_layer = 4
 collision_mask = 4
 script = ExtResource( 3 )
