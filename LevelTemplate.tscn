@@ -17,15 +17,15 @@ script = ExtResource( 8 )
 [node name="Walls" parent="." instance=ExtResource( 4 )]
 
 [node name="Hole" parent="." instance=ExtResource( 7 )]
-position = Vector2( 64, 72 )
+position = Vector2( 64, 80 )
 
 [node name="Obstructions" parent="." instance=ExtResource( 3 )]
 
 [node name="Rock" parent="." instance=ExtResource( 5 )]
-position = Vector2( 64, 40 )
+position = Vector2( 64, 32 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 24, 64 )
+position = Vector2( 16, 64 )
 
 [node name="LevelExit" parent="." instance=ExtResource( 2 )]
-position = Vector2( 104, 0 )
+position = Vector2( 112, 0 )
