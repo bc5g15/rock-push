@@ -12,6 +12,9 @@ onready var frontSmash = $FrontSmash
 onready var backSmash = $BackSmash
 onready var doorBase = $DoorBase
 
+onready var smallSmash = $SmallSmash
+onready var bigSmash = $BigSmash
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if isOpen:
@@ -35,9 +38,11 @@ func open_door():
 
 func _on_FrontSmash_body_entered(_body):
 	open_door()
+	smallSmash.emitting = true
 	pass # Replace with function body.
 
 
 func _on_BackSmash_body_entered(_body):
 	open_door()
+	bigSmash.emitting = true
 	pass # Replace with function body.
