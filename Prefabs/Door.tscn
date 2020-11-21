@@ -94,6 +94,7 @@ z_index = -1
 emitting = false
 amount = 12
 lifetime = 10.0
+one_shot = true
 explosiveness = 1.0
 lifetime_randomness = 1.0
 texture = ExtResource( 5 )
