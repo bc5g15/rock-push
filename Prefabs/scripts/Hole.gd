@@ -5,6 +5,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
+onready var dustCloud = $DustCloud
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,6 +20,7 @@ func _fill_hole():
 	$AnimatedSprite.play("full")
 	$HoleFill.queue_free()
 	$PlayerBlock.queue_free()
+	dustCloud.emitting = true
 
 
 func _on_HoleFill_area_entered(area):
