@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SmallTurnTile-export2.png-bf0d54f3c9301e1a706c25411066456e.stex"
+path="res://.import/bg_01.png-570ec9107962ae1ef2c8974c7c894122.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SmallTurnTile-export2.png"
-dest_files=[ "res://.import/SmallTurnTile-export2.png-bf0d54f3c9301e1a706c25411066456e.stex" ]
+source_file="res://Assets/UI/bg_01.png"
+dest_files=[ "res://.import/bg_01.png-570ec9107962ae1ef2c8974c7c894122.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hole-Open.png-c30891093ac52aa90040d7b90b82a3f7.stex"
+path="res://.import/hero-female-side-attack.png-82c484bc7f3dd4191a37b8978eed09fc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hole-Open.png"
-dest_files=[ "res://.import/Hole-Open.png-c30891093ac52aa90040d7b90b82a3f7.stex" ]
+source_file="res://Assets/Player/hero-female-side-attack.png"
+dest_files=[ "res://.import/hero-female-side-attack.png-82c484bc7f3dd4191a37b8978eed09fc.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SmallerRock.png-27977431bffeee2a0383ee735ae61876.stex"
+path="res://.import/hero-female-front-attack.png-715bb5459f3efc4e8c9203d072a8f98d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SmallerRock.png"
-dest_files=[ "res://.import/SmallerRock.png-27977431bffeee2a0383ee735ae61876.stex" ]
+source_file="res://Assets/Player/hero-female-front-attack.png"
+dest_files=[ "res://.import/hero-female-front-attack.png-715bb5459f3efc4e8c9203d072a8f98d.stex" ]
 
 [params]
 

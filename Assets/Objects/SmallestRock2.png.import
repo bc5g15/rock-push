@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hero-female-front-walk.png-3c67376df9a9bd563018cbeecffd7615.stex"
+path="res://.import/SmallestRock2.png-e2385757508dfb61340ab22b764d865e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hero-female-front-walk.png"
-dest_files=[ "res://.import/hero-female-front-walk.png-3c67376df9a9bd563018cbeecffd7615.stex" ]
+source_file="res://Assets/Objects/SmallestRock2.png"
+dest_files=[ "res://.import/SmallestRock2.png-e2385757508dfb61340ab22b764d865e.stex" ]
 
 [params]
 
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

@@ -1,15 +1,28 @@
 [gd_scene load_steps=40 format=2]
 
-[ext_resource path="res://Assets/hero-female-front-idle.png" type="Texture" id=1]
-[ext_resource path="res://Assets/hero-female-back-idle.png" type="Texture" id=2]
-[ext_resource path="res://Assets/hero-female-side-idle.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Player/hero-female-front-idle.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Player/hero-female-back-idle.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Player/hero-female-side-idle.png" type="Texture" id=3]
 [ext_resource path="res://Prefabs/scripts/PlayerMove.gd" type="Script" id=4]
-[ext_resource path="res://Assets/hero-female-back-walk.png" type="Texture" id=5]
-[ext_resource path="res://Assets/hero-female-front-walk.png" type="Texture" id=6]
-[ext_resource path="res://Assets/hero-female-side-walk.png" type="Texture" id=7]
-[ext_resource path="res://Assets/hero-female-back-attack.png" type="Texture" id=8]
-[ext_resource path="res://Assets/hero-female-front-attack.png" type="Texture" id=9]
-[ext_resource path="res://Assets/hero-female-side-attack.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Player/hero-female-back-walk.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Player/hero-female-front-walk.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Player/hero-female-side-walk.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Player/hero-female-back-attack.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Player/hero-female-front-attack.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Player/hero-female-side-attack.png" type="Texture" id=10]
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 9 )

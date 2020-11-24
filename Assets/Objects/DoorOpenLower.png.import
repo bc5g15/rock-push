@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SmallHoleOpen.png-9bdcdefba3aac2bbdae51979269cb6e4.stex"
+path="res://.import/DoorOpenLower.png-54648859d9f6238ba89c63df75bc9292.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SmallHoleOpen.png"
-dest_files=[ "res://.import/SmallHoleOpen.png-9bdcdefba3aac2bbdae51979269cb6e4.stex" ]
+source_file="res://Assets/Objects/DoorOpenLower.png"
+dest_files=[ "res://.import/DoorOpenLower.png-54648859d9f6238ba89c63df75bc9292.stex" ]
 
 [params]
 

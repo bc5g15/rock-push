@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hero-female-side-walk.png-949dd54a727689778e2fa9cd6ad5b966.stex"
+path="res://.import/objects.png-84c0bb9c92a52c89f226603df43c0b1f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hero-female-side-walk.png"
-dest_files=[ "res://.import/hero-female-side-walk.png-949dd54a727689778e2fa9cd6ad5b966.stex" ]
+source_file="res://Assets/Objects/objects.png"
+dest_files=[ "res://.import/objects.png-84c0bb9c92a52c89f226603df43c0b1f.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

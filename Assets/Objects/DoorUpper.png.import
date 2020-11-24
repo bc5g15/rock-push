@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hero-female-side-attack.png-4f21fa571485cf98db8afe2840567fc9.stex"
+path="res://.import/DoorUpper.png-a9e35ed0ab1b3984787d29ccbcdb4dee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hero-female-side-attack.png"
-dest_files=[ "res://.import/hero-female-side-attack.png-4f21fa571485cf98db8afe2840567fc9.stex" ]
+source_file="res://Assets/Objects/DoorUpper.png"
+dest_files=[ "res://.import/DoorUpper.png-a9e35ed0ab1b3984787d29ccbcdb4dee.stex" ]
 
 [params]
 
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

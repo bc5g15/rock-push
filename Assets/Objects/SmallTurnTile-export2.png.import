@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DoorOpenLower.png-14375dce4a766dc5b48d2c237351deb0.stex"
+path="res://.import/SmallTurnTile-export2.png-82acf9bdc68d35c9a62a7f31676b28be.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DoorOpenLower.png"
-dest_files=[ "res://.import/DoorOpenLower.png-14375dce4a766dc5b48d2c237351deb0.stex" ]
+source_file="res://Assets/Objects/SmallTurnTile-export2.png"
+dest_files=[ "res://.import/SmallTurnTile-export2.png-82acf9bdc68d35c9a62a7f31676b28be.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hero-female-back-idle.png-ee5b51874f3372f0f853c7b639bbabb4.stex"
+path="res://.import/hero-female-front-walk.png-2680ad0f6f109fdb24709f006edb8b01.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hero-female-back-idle.png"
-dest_files=[ "res://.import/hero-female-back-idle.png-ee5b51874f3372f0f853c7b639bbabb4.stex" ]
+source_file="res://Assets/Player/hero-female-front-walk.png"
+dest_files=[ "res://.import/hero-female-front-walk.png-2680ad0f6f109fdb24709f006edb8b01.stex" ]
 
 [params]
 

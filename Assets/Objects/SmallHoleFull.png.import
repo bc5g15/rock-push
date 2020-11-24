@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SmallHoleFull.png-fce3e8a438d922f37298bf0a80ef7841.stex"
+path="res://.import/SmallHoleFull.png-6e9d089f396bdcea4c4dbb00efb0a65c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SmallHoleFull.png"
-dest_files=[ "res://.import/SmallHoleFull.png-fce3e8a438d922f37298bf0a80ef7841.stex" ]
+source_file="res://Assets/Objects/SmallHoleFull.png"
+dest_files=[ "res://.import/SmallHoleFull.png-6e9d089f396bdcea4c4dbb00efb0a65c.stex" ]
 
 [params]
 
