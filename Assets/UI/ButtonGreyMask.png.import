@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/ButtonGreyMask.png-7e942ceb6f60946aa389c8f0ffb39317.res"
+
+[deps]
+
+source_file="res://Assets/UI/ButtonGreyMask.png"
+dest_files=[ "res://.import/ButtonGreyMask.png-7e942ceb6f60946aa389c8f0ffb39317.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5
