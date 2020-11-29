@@ -23,19 +23,19 @@ rotation = 1.5708
 tile_data = PoolIntArray( 0, 0, 0, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 6, 5, 0, 7, 5, 0, 8, 5, 0, 9, 5, 0, 10, 5, 0, 11, 5, 0, 12, 5, 0, 13, 5, 0, 131072, 6, 0, 196608, 6, 0, 262144, 6, 0, 327680, 6, 0, 393216, 6, 0, 458752, 6, 0, 524288, 6, 0, 589824, 6, 0, 655360, 6, 0, 720896, 6, 0, 786432, 6, 0, 851970, 8, 0, 851971, 8, 0, 851972, 8, 0, 851973, 8, 0, 851978, 8, 0, 851979, 8, 0, 851980, 8, 0, 851981, 8, 0 )
 
 [node name="Hole" parent="." instance=ExtResource( 8 )]
-position = Vector2( 72, 144 )
+position = Vector2( 112, 176 )
 
 [node name="Hole2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 112, 288 )
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 80, 80 )
-collision_mask = 2147483651
 
 [node name="Active Backdrop" type="Node2D" parent="."]
 
 [node name="Obstructions" parent="Active Backdrop" instance=ExtResource( 7 )]
 tile_data = PoolIntArray( 327702, 0, 0, 524300, 0, 0, 589836, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 80, 80 )
+collision_mask = 2147483651
 
 [node name="ActiveObj" type="Node2D" parent="."]
 
