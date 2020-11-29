@@ -194,7 +194,7 @@ shape = SubResource( 29 )
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 11 )]
 
-[node name="Footstep" type="AudioStreamPlayer" parent="."]
+[node name="Footstep" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 12 )
 
 [node name="FootTimer" type="Timer" parent="."]
