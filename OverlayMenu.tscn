@@ -1,20 +1,19 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Assets/UI/Backdrop.png" type="Texture" id=1]
+[ext_resource path="res://Prefabs/scripts/OverlayMenu.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Buttons/HomeButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Buttons/Audiobutton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Buttons/ResetButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Buttons/CloseButton.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Prefabs/scripts/OverlayMenu.gd" type="Script" id=7]
-[ext_resource path="res://Prefabs/Buttons/MenuButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Buttons/MenuButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Buttons/CloseButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/UI/Backdrop.png" type="Texture" id=7]
 
-[node name="Control" type="Control"]
+[node name="OverlayMenu" type="ViewportContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 7 )
+script = ExtResource( 1 )
 __meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
 
 [node name="MenuBox" type="NinePatchRect" parent="."]
@@ -28,7 +27,7 @@ margin_left = -78.0
 margin_top = -111.0
 margin_right = 78.0
 margin_bottom = 111.0
-texture = ExtResource( 1 )
+texture = ExtResource( 7 )
 patch_margin_left = 8
 patch_margin_top = 25
 patch_margin_right = 8
@@ -67,7 +66,7 @@ margin_right = 64.0
 margin_bottom = 136.0
 rect_min_size = Vector2( 64, 64 )
 
-[node name="CloseButton" parent="MenuBox/VBoxContainer" instance=ExtResource( 5 )]
+[node name="CloseButton" parent="MenuBox/VBoxContainer" instance=ExtResource( 6 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -118,7 +117,7 @@ margin_top = 0.0
 margin_right = 32.0
 margin_bottom = 32.0
 
-[node name="MenuButton" parent="HBoxContainer" instance=ExtResource( 8 )]
+[node name="MenuButton" parent="HBoxContainer" instance=ExtResource( 5 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
