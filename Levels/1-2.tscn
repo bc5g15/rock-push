@@ -1,13 +1,20 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Prefabs/Obstructions.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Prefabs/LevelExit.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/Floor.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Walls.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Prefabs/Rock.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/Hole.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Scenery/Obstructions.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/ActiveObjects/LevelExit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/ActiveObjects/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Scenery/Floor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Scenery/Walls.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/ActiveObjects/Rock.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/ActiveObjects/Hole.tscn" type="PackedScene" id=7]
 [ext_resource path="res://TopScripts/PlayerFollow.gd" type="Script" id=8]
+
+
+
+
+
+
+
 
 [node name="1-2" type="Node2D"]
 script = ExtResource( 8 )
