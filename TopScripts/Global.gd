@@ -29,3 +29,6 @@ func _deferred_reset():
 # warning-ignore:return_value_discarded
 	get_tree().reload_current_scene()
 	current_scene = get_tree().current_scene
+
+func set_pause(paused):
+	get_tree().paused = paused
