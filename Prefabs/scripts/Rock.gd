@@ -3,6 +3,9 @@ extends KinematicBody2D
 export (int) var speed = 200
 var velocity = Vector2()
 
+onready var particles = $KnockParticles
+onready var collisionShape = $CollisionShape2D
+
 var directions = {
 	"left": Vector2.LEFT,
 	"right": Vector2.RIGHT,
@@ -36,12 +39,15 @@ func rockPush(newVel):
 func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	if collision && velocity.length() > 0:
+		particles.position = to_local(collision.position)
+		particles.emitting = true
 		if collision.collider.has_method("rockPush"):
 			print("Hit a Rock!")
 			collision.collider.call("rockPush", velocity)
 		velocity = Vector2.ZERO
 		reposition()
 			
+
 
 func on_hole(_area):
 	self.queue_free()
