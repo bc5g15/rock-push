@@ -1,13 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/UI/ButtonGreyMask.png" type="BitMap" id=1]
 [ext_resource path="res://Assets/UI/ButtonGrayUp.png" type="Texture" id=2]
 [ext_resource path="res://Assets/UI/ButtonGrayDown.png" type="Texture" id=3]
-[ext_resource path="res://Assets/UI/CharaBackdrop2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/CharBackdrop3.png" type="Texture" id=4]
 [ext_resource path="res://Assets/UI/VT323-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/UI/baseline_meeting_room_black_36dp.png" type="Texture" id=6]
 
-[sub_resource type="DynamicFont" id=1]
-size = 18
+[sub_resource type="DynamicFont" id=3]
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
@@ -21,53 +21,50 @@ margin_left = -16.0
 margin_top = -16.0
 margin_right = 16.0
 margin_bottom = 16.0
+rect_min_size = Vector2( 32, 32 )
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
 texture_click_mask = ExtResource( 1 )
 expand = true
 stretch_mode = 5
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Image" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 4.0
-margin_right = -4.0
-margin_bottom = -4.0
+texture = ExtResource( 6 )
+expand = true
 stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ShorcutBackdrop" type="TextureRect" parent="."]
+self_modulate = Color( 0.68, 0.68, 0.68, 1 )
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -8.0
-margin_top = -14.0
-margin_right = 7.0
-margin_bottom = 1.0
+margin_left = -12.0
+margin_top = -12.0
+margin_right = 4.0
+margin_bottom = 4.0
 texture = ExtResource( 4 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Shortcut" type="Label" parent="ShorcutBackdrop"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -8.0
-margin_top = -9.5
-margin_right = 8.0
-margin_bottom = 9.5
-custom_fonts/font = SubResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }

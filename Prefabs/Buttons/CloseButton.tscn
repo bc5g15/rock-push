@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/Buttons/CustomButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/UI/baseline_close_black_36dp.png" type="Texture" id=2]
+
+[sub_resource type="InputEventAction" id=1]
+action = "pause"
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[node name="CloseButton" instance=ExtResource( 1 )]
+self_modulate = Color( 0.921569, 0.121569, 0.121569, 1 )
+shortcut = SubResource( 2 )
+
+[node name="Image" parent="." index="0"]
+texture = ExtResource( 2 )
+
+[node name="Shortcut" parent="ShorcutBackdrop" index="0"]
+text = "P"
