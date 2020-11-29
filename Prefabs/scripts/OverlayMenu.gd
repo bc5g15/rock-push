@@ -6,7 +6,7 @@ extends Control
 # var b = "text"
 
 onready var menuBox = $MenuBox
-onready var menuButton = $MenuButton
+onready var menuButton = $HBoxContainer/MenuButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,7 +28,15 @@ func _on_CloseMenuButton_pressed():
 	menuBox.visible = false
 	pass # Replace with function body.
 
+func _on_CloseButton_pressed():
+	pass # Replace with function body.
 
-func _on_MainMenuButton_pressed():
-	Global.goto_scene('res://Debug.tscn')
+
+func _on_ResetButton_pressed():
+	Global.reset_current_scene()
+	pass # Replace with function body.
+
+
+func _on_HomeButton_pressed():
+	Global.goto_scene('res://Debug.tscn')	
 	pass # Replace with function body.
