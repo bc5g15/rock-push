@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Objects/SmallestRock2.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/scripts/Rock.gd" type="Script" id=2]
 [ext_resource path="res://Prefabs/scripts/RockObjCollide.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Objects/Dustmote.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Audio/RockThud.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7, 7 )
@@ -48,5 +49,9 @@ gravity = Vector2( 0, 0 )
 initial_velocity = 20.0
 damping = 15.0
 color_ramp = SubResource( 3 )
+
+[node name="Thud" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+volume_db = -10.0
 [connection signal="fall_in_hole" from="DoorCollide" to="." method="_on_DoorCollide_fall_in_hole"]
 [connection signal="turned" from="DoorCollide" to="." method="_on_DoorCollide_turned"]

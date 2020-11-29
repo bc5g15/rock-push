@@ -5,6 +5,7 @@ var velocity = Vector2()
 
 onready var particles = $KnockParticles
 onready var collisionShape = $CollisionShape2D
+onready var thud = $Thud
 
 var directions = {
 	"left": Vector2.LEFT,
@@ -41,6 +42,7 @@ func _physics_process(delta):
 	if collision && velocity.length() > 0:
 		particles.position = to_local(collision.position)
 		particles.emitting = true
+		thud.playing = true
 		if collision.collider.has_method("rockPush"):
 			print("Hit a Rock!")
 			collision.collider.call("rockPush", velocity)
