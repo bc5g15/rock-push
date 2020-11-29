@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/UI/Backdrop.png" type="Texture" id=7]
 
 [node name="OverlayMenu" type="ViewportContainer"]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
