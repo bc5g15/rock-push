@@ -9,6 +9,9 @@ var direction = ""
 onready var collider = $CollisionShape2D
 var velocity = Vector2()
 
+onready var footstep = $Footstep
+onready var timer = $FootTimer
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -40,6 +43,12 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	var new_velocity = move_and_slide(velocity)
+	# Trigger footsteps
+	if new_velocity.length() > 0:
+		start_timer()
+	else:
+		timer.stop()
+		
 	var cols = get_slide_count()
 	animate(velocity, cols)
 	if cols > 0 && pushing && new_velocity == Vector2.ZERO:
@@ -78,3 +87,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func start_timer():
+	if timer.is_stopped():
+		footstep.play()
+		timer.start()
+
+func _on_FootTimer_timeout():
+	footstep.play()
+	pass # Replace with function body.
