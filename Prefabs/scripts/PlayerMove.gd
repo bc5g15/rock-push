@@ -18,16 +18,16 @@ onready var timer = $FootTimer
 
 func get_input():
 	velocity = Vector2()
-	if Input.is_action_pressed('right'):
+	if Input.is_action_pressed('ui_right'):
 		direction = 'right'
 		velocity.x += 1
-	if Input.is_action_pressed('left'):
+	if Input.is_action_pressed('ui_left'):
 		direction = 'left'
 		velocity.x -= 1
-	if Input.is_action_pressed('up'):
+	if Input.is_action_pressed('ui_up'):
 		direction = 'up'
 		velocity.y -= 1
-	if Input.is_action_pressed('down'):
+	if Input.is_action_pressed('ui_down'):
 		direction = 'down'
 		velocity.y += 1
 	
