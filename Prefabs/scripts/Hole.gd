@@ -6,6 +6,7 @@ extends Node2D
 # var b = "text"
 
 onready var dustCloud = $DustCloud
+onready var sfx = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,6 +21,7 @@ func _fill_hole():
 	$AnimatedSprite.play("full")
 	$HoleFill.queue_free()
 	$PlayerBlock.queue_free()
+	sfx.playing = true
 	dustCloud.emitting = true
 
 
