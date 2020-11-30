@@ -5,9 +5,10 @@ export (float) var maxTimer = 0.3
 var currentTimer = maxTimer
 var pushing = false
 var direction = ""
+var can_move = 1
 
 onready var collider = $CollisionShape2D
-var velocity = Vector2()
+#var velocity = Vector2()
 
 onready var footstep = $Footstep
 onready var timer = $FootTimer
@@ -17,7 +18,7 @@ onready var timer = $FootTimer
 # var b = "text"
 
 func get_input():
-	velocity = Vector2()
+	var velocity = Vector2()
 	if Input.is_action_pressed('ui_right'):
 		direction = 'right'
 		velocity.x += 1
@@ -39,9 +40,11 @@ func get_input():
 		if Input.is_action_just_pressed("ui_accept"):
 			# Toggle collider
 			collider.disabled = !collider.disabled
+	
+	return velocity
 
 func _physics_process(delta):
-	get_input()
+	var velocity = (get_input() * can_move)
 	var new_velocity = move_and_slide(velocity)
 	# Trigger footsteps
 	if new_velocity.length() > 0:
@@ -84,6 +87,12 @@ func _ready():
 	pass # Replace with function body.
 
 func hit_by_rock():
+	can_move = 0
+	rock_animation()
+	pass
+
+func rock_animation():
+	FadeController.fade_reset()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
