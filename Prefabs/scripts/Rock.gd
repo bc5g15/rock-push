@@ -40,6 +40,10 @@ func rockPush(newVel):
 func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	if collision && velocity.length() > 0:
+		# If collided with player
+		if collision.collider.has_method("hit_by_rock"):
+			print("Hit player with rock")
+			return
 		particles.position = to_local(collision.position)
 		particles.emitting = true
 		thud.playing = true
