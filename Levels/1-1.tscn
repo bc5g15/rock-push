@@ -10,10 +10,6 @@
 [ext_resource path="res://Prefabs/ActiveObjects/LevelExit.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Scenery/Floor.tscn" type="PackedScene" id=9]
 
-
-
-
-
 [node name="Level1" type="Node2D"]
 script = ExtResource( 7 )
 
