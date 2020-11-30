@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://TopScripts/Global.gd"
+FadeController="*res://Experiments/FadeController.tscn"
 
 [display]
 
