@@ -86,7 +86,6 @@ func hit_by_rock(velocity, rockPosition):
 	animatable = false
 	var relativePos = to_global(position) - rockPosition
 	knockout_velocity = -velocity.bounce(relativePos.normalized())
-	print(knockout_velocity)
 	collider.disabled = true
 	FadeController.fade_reset()
 	sprite.animation = "spin"
