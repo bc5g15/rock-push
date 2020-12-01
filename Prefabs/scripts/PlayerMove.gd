@@ -5,17 +5,15 @@ export (float) var maxTimer = 0.3
 var currentTimer = maxTimer
 var pushing = false
 var direction = ""
+
 var can_move = 1
+var animatable = true
+var knockout_velocity = Vector2.ZERO
 
 onready var collider = $CollisionShape2D
-#var velocity = Vector2()
-
 onready var footstep = $Footstep
 onready var timer = $FootTimer
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var sprite = $AnimatedSprite
 
 func get_input():
 	var velocity = Vector2()
@@ -44,7 +42,7 @@ func get_input():
 	return velocity
 
 func _physics_process(delta):
-	var velocity = (get_input() * can_move)
+	var velocity = (get_input() * can_move) + ((1-can_move)*knockout_velocity)
 	var new_velocity = move_and_slide(velocity)
 	# Trigger footsteps
 	if new_velocity.length() > 0:
@@ -80,24 +78,19 @@ func animate(vel, collisions):
 	elif vel.length() > 0:
 		currentAnimation = "walk-" + currentAnimation
 		
-	$AnimatedSprite.animation = currentAnimation
+	if animatable:
+		$AnimatedSprite.animation = currentAnimation
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-func hit_by_rock():
+func hit_by_rock(velocity, rockPosition):
 	can_move = 0
-	rock_animation()
-	pass
-
-func rock_animation():
+	animatable = false
+	var relativePos = to_global(position) - rockPosition
+	knockout_velocity = -velocity.bounce(relativePos.normalized())
+	print(knockout_velocity)
+	collider.disabled = true
 	FadeController.fade_reset()
+	sprite.animation = "spin"
 	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func start_timer():
 	if timer.is_stopped():

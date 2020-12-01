@@ -43,7 +43,7 @@ func _physics_process(delta):
 		# If collided with player
 		if collision.collider.has_method("hit_by_rock"):
 			print("Hit player with rock")
-			collision.collider.call("hit_by_rock")
+			collision.collider.call("hit_by_rock", velocity, to_global(position))
 			return
 		particles.position = to_local(collision.position)
 		particles.emitting = true
