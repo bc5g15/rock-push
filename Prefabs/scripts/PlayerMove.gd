@@ -12,6 +12,7 @@ var knockout_velocity = Vector2.ZERO
 
 onready var collider = $CollisionShape2D
 onready var footstep = $Footstep
+onready var knockout = $Knockout
 onready var timer = $FootTimer
 onready var sprite = $AnimatedSprite
 
@@ -87,6 +88,7 @@ func hit_by_rock(velocity, rockPosition):
 	var relativePos = to_global(position) - rockPosition
 	knockout_velocity = -velocity.bounce(relativePos.normalized())
 	collider.disabled = true
+	knockout.play()
 	FadeController.fade_reset()
 	sprite.animation = "spin"
 	pass
