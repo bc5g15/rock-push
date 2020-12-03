@@ -8,6 +8,9 @@ extends Control
 onready var menuBox = $MenuBox
 onready var menuButton = $HBoxContainer/MenuButton
 
+func _ready():
+	visible = true
+
 func _on_MenuButton_toggled(button_pressed):
 	menuBox.visible = button_pressed
 	Global.set_pause(button_pressed)
