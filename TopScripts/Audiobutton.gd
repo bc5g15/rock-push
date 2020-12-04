@@ -10,7 +10,10 @@ onready var aOff = $AudioOff
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var isMute = AudioServer.is_bus_mute(0)
+	aOn.visible = !isMute
+	aOff.visible = isMute
+	pressed = isMute
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
