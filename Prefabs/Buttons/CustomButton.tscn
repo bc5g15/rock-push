@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/UI/VT323-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Assets/UI/baseline_meeting_room_black_36dp.png" type="Texture" id=6]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
@@ -61,7 +61,7 @@ __meta__ = {
 [node name="Shortcut" type="Label" parent="ShorcutBackdrop"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 align = 1
 valign = 1
 __meta__ = {
