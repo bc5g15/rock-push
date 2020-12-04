@@ -1,0 +1,133 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Experiments/MenuShift.gd" type="Script" id=1]
+
+[sub_resource type="InputEventAction" id=1]
+action = "ui_left"
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "ScrollDown"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Menu1:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.535887, 0.329877 ),
+"update": 0,
+"values": [ Vector2( 0, -312 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Menu2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.287175, 0.5 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 312 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "ScrollUp"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Menu1:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.517632, 0.450625 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -312 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Menu2:rect_position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.535887, 0.482968 ),
+"update": 0,
+"values": [ Vector2( 0, 312 ), Vector2( 0, 0 ) ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu1" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollUpBtn" type="Button" parent="Menu1"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -56.0
+margin_top = -76.0
+margin_right = 60.0
+margin_bottom = -56.0
+toggle_mode = true
+shortcut = SubResource( 2 )
+text = "Test This Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Menu1"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -29.5
+margin_top = 49.7947
+margin_right = 29.5
+margin_bottom = 63.7947
+text = "Title Text"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu2" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 312.0
+margin_bottom = 312.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollDownBtn" type="Button" parent="Menu2"]
+margin_left = 168.0
+margin_top = 120.0
+margin_right = 180.0
+margin_bottom = 140.0
+text = "Test This Other Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/ScrollDown = SubResource( 4 )
+anims/ScrollUp = SubResource( 3 )
+[connection signal="pressed" from="Menu1/ScrollUpBtn" to="." method="_on_ScrollUpBtn_pressed"]
+[connection signal="pressed" from="Menu2/ScrollDownBtn" to="." method="_on_ScrollDownBtn_pressed"]
