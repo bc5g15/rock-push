@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 Global="*res://TopScripts/Global.gd"
 FadeController="*res://Experiments/FadeController.tscn"
+LevelUnlocker="*res://TopScripts/LevelUnlocker.gd"
 
 [display]
 
