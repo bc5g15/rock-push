@@ -5,12 +5,27 @@ extends Node
 # var a = 2
 # var b = "text"
 
+# All but the first level locked by default
+var levels = {
+	"1-1": true,
+	"1-2": false,
+	"1-3": false,
+	"2-1": false,
+	"2-2": false,
+	"2-3": false,
+	"3-1": false,
+	"3-2": false,
+	"3-3": false,
+	"4-1": false
+}
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func isLocked(level):
+	return !levels[level]
+	
+func unlock(level):
+	levels[level] = true
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func unlock_all():
+	for level in levels:
+		print(level)
+		levels[level] = true
