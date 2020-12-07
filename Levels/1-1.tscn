@@ -37,7 +37,7 @@ position = Vector2( 768, 160 )
 tile_data = PoolIntArray( 458787, 0, 0, 524320, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589859, 0, 0, 589863, 0, 0, 589864, 0, 0, 589865, 0, 0, 655393, 0, 0, 720916, 0, 0, 720917, 0, 0, 720918, 0, 0, 720936, 0, 0, 720937, 0, 0, 786466, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 256, 160 )
+position = Vector2( 240, 160 )
 
 [node name="Rocks" type="Node2D" parent="."]
 __meta__ = {
