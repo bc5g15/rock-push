@@ -27,5 +27,4 @@ func unlock(level):
 
 func unlock_all():
 	for level in levels:
-		print(level)
 		levels[level] = true

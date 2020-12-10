@@ -21,6 +21,5 @@ func _pressed():
 
 
 func refresh():
-	print("Hello?")
 	_check_locked()
 	pass # Replace with function body.
