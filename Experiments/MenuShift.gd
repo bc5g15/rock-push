@@ -7,9 +7,12 @@ extends Control
 export(int) var heightShift = 312
 
 onready var animation = $AnimationPlayer
+onready var startButton = $Menu1/ScrollUpBtn
+onready var level1 = $Menu2/LevelSelect/VBoxContainer/GridContainer/Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	startButton.grab_focus()
 	pass # Replace with function body.
 
 
@@ -24,9 +27,14 @@ func _on_Button2_pressed():
 
 func _on_ScrollUpBtn_pressed():
 	animation.play("ScrollUp")
+	startButton.disabled = true
+	level1.grab_focus()
+	
 	pass # Replace with function body.
 
 
 func _on_ScrollDownBtn_pressed():
 	animation.play("ScrollDown")
+	startButton.disabled = false
+	startButton.grab_focus()
 	pass # Replace with function body.

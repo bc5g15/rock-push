@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Experiments/MenuShift.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/Menu/LevelSelect.tscn" type="PackedScene" id=2]
 
 [sub_resource type="InputEventAction" id=1]
 action = "ui_left"
@@ -8,7 +9,7 @@ action = "ui_left"
 [sub_resource type="ShortCut" id=2]
 shortcut = SubResource( 1 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "ScrollDown"
 length = 0.5
 tracks/0/type = "value"
@@ -36,8 +37,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 312 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "ScrollUp"
+[sub_resource type="Animation" id=4]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Menu1:rect_position")
@@ -88,7 +88,6 @@ margin_left = -56.0
 margin_top = -76.0
 margin_right = 60.0
 margin_bottom = -56.0
-toggle_mode = true
 shortcut = SubResource( 2 )
 text = "Test This Button"
 __meta__ = {
@@ -116,18 +115,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="LevelSelect" parent="Menu2" instance=ExtResource( 2 )]
+
 [node name="ScrollDownBtn" type="Button" parent="Menu2"]
-margin_left = 168.0
-margin_top = 120.0
-margin_right = 180.0
-margin_bottom = 140.0
+margin_left = 15.4373
+margin_top = 23.5889
+margin_right = 172.437
+margin_bottom = 43.5889
 text = "Test This Other Button"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/ScrollDown = SubResource( 4 )
-anims/ScrollUp = SubResource( 3 )
+anims/ScrollDown = SubResource( 3 )
+anims/ScrollUp = SubResource( 4 )
 [connection signal="pressed" from="Menu1/ScrollUpBtn" to="." method="_on_ScrollUpBtn_pressed"]
 [connection signal="pressed" from="Menu2/ScrollDownBtn" to="." method="_on_ScrollDownBtn_pressed"]
