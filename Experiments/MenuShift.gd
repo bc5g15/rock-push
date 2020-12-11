@@ -7,8 +7,8 @@ extends Control
 export(int) var heightShift = 312
 
 onready var animation = $AnimationPlayer
-onready var startButton = $Menu1/ScrollUpBtn
-onready var level1 = $Menu2/LevelSelect/VBoxContainer/GridContainer/Button
+onready var startButton = $TitleScreen/ScrollUpBtn
+onready var level1 = $LevelSelect/LevelSelect/VBoxContainer/GridContainer/Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

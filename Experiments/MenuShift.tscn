@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Experiments/MenuShift.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Menu/LevelSelect.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Menu/TitleScreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/UI/SplashScreen3.png" type="Texture" id=4]
 
 [sub_resource type="InputEventAction" id=1]
 action = "ui_left"
@@ -13,7 +15,7 @@ shortcut = SubResource( 1 )
 resource_name = "ScrollDown"
 length = 0.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("Menu1:rect_position")
+tracks/0/path = NodePath("TitleScreen:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -25,7 +27,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, -312 ), Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Menu2:rect_position")
+tracks/1/path = NodePath("Credits:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -38,9 +40,89 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=4]
+resource_name = "ScrollLeft"
 length = 0.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("Menu1:rect_position")
+tracks/0/path = NodePath("TitleScreen:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.554785, 0.420448 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -524, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LevelSelect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.420448, 0.554785 ),
+"update": 0,
+"values": [ Vector2( 524, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Backdrop:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.43, 0.43, 0.43, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "ScrollRight"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelSelect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.466516, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 524, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TitleScreen:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.554785, 1 ),
+"update": 0,
+"values": [ Vector2( -524, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Backdrop:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.43, 0.43, 0.43, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("TitleScreen:rect_position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -52,7 +134,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -312 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Menu2:rect_position")
+tracks/1/path = NodePath("Credits:rect_position")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -63,6 +145,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector2( 0, 312 ), Vector2( 0, 0 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Backdrop:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.35, 0.35, 0.35, 1 ) ]
+}
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -72,41 +166,39 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Menu1" type="Control" parent="."]
+[node name="Backdrop" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleScreen" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ScrollUpBtn" type="Button" parent="Menu1"]
+[node name="TitleScreen" parent="TitleScreen" instance=ExtResource( 3 )]
+
+[node name="ScrollUpBtn" type="Button" parent="TitleScreen"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -56.0
-margin_top = -76.0
-margin_right = 60.0
-margin_bottom = -56.0
+margin_left = -54.9406
+margin_top = -54.8107
+margin_right = 61.0594
+margin_bottom = -34.8107
 shortcut = SubResource( 2 )
 text = "Test This Button"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Menu1"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -29.5
-margin_top = 49.7947
-margin_right = 29.5
-margin_bottom = 63.7947
-text = "Title Text"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Menu2" type="Control" parent="."]
+[node name="Credits" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 312.0
@@ -115,20 +207,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LevelSelect" parent="Menu2" instance=ExtResource( 2 )]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/ScrollDown = SubResource( 3 )
+anims/ScrollLeft = SubResource( 4 )
+anims/ScrollRight = SubResource( 5 )
+anims/ScrollUp = SubResource( 6 )
 
-[node name="ScrollDownBtn" type="Button" parent="Menu2"]
-margin_left = 15.4373
-margin_top = 23.5889
-margin_right = 172.437
-margin_bottom = 43.5889
+[node name="LevelSelect" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 524.0
+margin_right = 524.0
+
+[node name="LevelSelect" parent="LevelSelect" instance=ExtResource( 2 )]
+
+[node name="ScrollDownBtn" type="Button" parent="LevelSelect"]
+margin_top = 5.29732
+margin_right = 157.0
+margin_bottom = 25.2973
 text = "Test This Other Button"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/ScrollDown = SubResource( 3 )
-anims/ScrollUp = SubResource( 4 )
-[connection signal="pressed" from="Menu1/ScrollUpBtn" to="." method="_on_ScrollUpBtn_pressed"]
-[connection signal="pressed" from="Menu2/ScrollDownBtn" to="." method="_on_ScrollDownBtn_pressed"]
+[connection signal="pressed" from="TitleScreen/ScrollUpBtn" to="." method="_on_ScrollUpBtn_pressed"]
+[connection signal="pressed" from="LevelSelect/ScrollDownBtn" to="." method="_on_ScrollDownBtn_pressed"]
