@@ -13,7 +13,6 @@ func _ready():
 func _check_locked():
 	if text:
 		disabled = LevelUnlocker.isLocked(text)
-		print(disabled)
 
 func _pressed():
 	if text:
@@ -23,3 +22,9 @@ func _pressed():
 func refresh():
 	_check_locked()
 	pass # Replace with function body.
+
+func disable_focus():
+	focus_mode = Control.FOCUS_NONE
+
+func enable_focus():
+	focus_mode = Control.FOCUS_ALL

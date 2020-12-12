@@ -26,4 +26,5 @@ func _on_ResetButton_pressed():
 
 func _on_HomeButton_pressed():
 	Global.set_pause(false)
-	FadeController.fade_to_scene('res://Prefabs/Menu/LevelSelect.tscn')
+	Global.menu = "LEVEL"
+	FadeController.fade_to_scene('res://Experiments/MenuShift.tscn')

@@ -1,15 +1,21 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Experiments/MenuShift.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Menu/LevelSelect.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Menu/TitleScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/UI/SplashScreen3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/VT323-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/UI/round_navigation_white_48dp.png" type="Texture" id=6]
+[ext_resource path="res://Assets/UI/round_play_arrow_white_48dp.png" type="Texture" id=7]
+[ext_resource path="res://fontTheme.tres" type="Theme" id=8]
 
-[sub_resource type="InputEventAction" id=1]
-action = "ui_left"
+[sub_resource type="ShortCut" id=1]
 
-[sub_resource type="ShortCut" id=2]
-shortcut = SubResource( 1 )
+[sub_resource type="DynamicFont" id=2]
+size = 26
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "ScrollDown"
@@ -37,6 +43,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 0.287175, 0.5 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, 312 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Backdrop:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.35, 0.35, 0.35, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -183,17 +201,33 @@ __meta__ = {
 
 [node name="TitleScreen" parent="TitleScreen" instance=ExtResource( 3 )]
 
-[node name="ScrollUpBtn" type="Button" parent="TitleScreen"]
+[node name="ScrollLeftBtn" type="Button" parent="TitleScreen"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -126.746
+margin_top = -29.1189
+margin_right = -66.7462
+margin_bottom = 24.8811
+focus_neighbour_left = NodePath("../CreditsBtn")
+shortcut = SubResource( 1 )
+icon = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsBtn" type="Button" parent="TitleScreen"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -54.9406
-margin_top = -54.8107
-margin_right = 61.0594
-margin_bottom = -34.8107
-shortcut = SubResource( 2 )
-text = "Test This Button"
+margin_left = -28.5
+margin_top = -28.2407
+margin_right = 28.5
+margin_bottom = -8.24072
+theme = ExtResource( 8 )
+text = "Credits"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -207,6 +241,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label" type="Label" parent="Credits"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -318.5
+margin_top = -70.5
+margin_right = 318.5
+margin_bottom = 70.5
+custom_fonts/font = SubResource( 2 )
+text = "Font - VT323-Regular from Google Fonts
+Icons from Material.IO
+Tileset/Character from TinyRPGDungeon by Ansimuz 
+ www.ansimuz.com"
+align = 1
+valign = 1
+
+[node name="FromCredits" type="Button" parent="Credits"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -30.0
+margin_top = -54.0
+margin_right = 30.0
+icon = ExtResource( 6 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/ScrollDown = SubResource( 3 )
 anims/ScrollLeft = SubResource( 4 )
@@ -218,16 +279,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 524.0
 margin_right = 524.0
-
-[node name="LevelSelect" parent="LevelSelect" instance=ExtResource( 2 )]
-
-[node name="ScrollDownBtn" type="Button" parent="LevelSelect"]
-margin_top = 5.29732
-margin_right = 157.0
-margin_bottom = 25.2973
-text = "Test This Other Button"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="TitleScreen/ScrollUpBtn" to="." method="_on_ScrollUpBtn_pressed"]
-[connection signal="pressed" from="LevelSelect/ScrollDownBtn" to="." method="_on_ScrollDownBtn_pressed"]
+
+[node name="LevelSelect" parent="LevelSelect" instance=ExtResource( 2 )]
+
+[node name="ScrollRightBtn" type="Button" parent="LevelSelect"]
+margin_left = 5.24408
+margin_top = 2.99661
+margin_right = 65.2441
+margin_bottom = 35.9966
+theme = ExtResource( 8 )
+text = "To Title"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="TitleScreen/ScrollLeftBtn" to="." method="_on_ScrollUpBtn_pressed"]
+[connection signal="pressed" from="TitleScreen/CreditsBtn" to="." method="_on_CreditsBtn_pressed"]
+[connection signal="pressed" from="Credits/FromCredits" to="." method="_on_FromCredits_pressed"]
+[connection signal="pressed" from="LevelSelect/ScrollRightBtn" to="." method="_on_ScrollDownBtn_pressed"]
