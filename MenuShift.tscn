@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Experiments/MenuShift.gd" type="Script" id=1]
+[ext_resource path="res://MenuShift.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Menu/LevelSelect.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Menu/TitleScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/UI/SplashScreen3.png" type="Texture" id=4]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/UI/round_navigation_white_48dp.png" type="Texture" id=6]
 [ext_resource path="res://Assets/UI/round_play_arrow_white_48dp.png" type="Texture" id=7]
 [ext_resource path="res://fontTheme.tres" type="Theme" id=8]
+
 
 [sub_resource type="ShortCut" id=1]
 
