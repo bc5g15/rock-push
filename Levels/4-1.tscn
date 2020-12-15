@@ -89,6 +89,7 @@ position = Vector2( 16, 192 )
 [node name="LevelExit" parent="." instance=ExtResource( 2 )]
 position = Vector2( -688, -336 )
 path = "Debug"
+current = "Levels/4-1"
 
 [node name="Doors" type="Node2D" parent="."]
 __meta__ = {

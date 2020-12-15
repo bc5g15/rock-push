@@ -9,13 +9,6 @@
 [ext_resource path="res://Prefabs/ActiveObjects/Hole.tscn" type="PackedScene" id=7]
 [ext_resource path="res://TopScripts/PlayerFollow.gd" type="Script" id=8]
 
-
-
-
-
-
-
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 8 )
 
@@ -86,4 +79,5 @@ position = Vector2( 96, 136 )
 [node name="LevelExit" parent="." instance=ExtResource( 2 )]
 position = Vector2( -48, 112 )
 rotation = -1.5708
-path = "Debug"
+path = "Levels/2-3"
+current = "Levels/2-2"

@@ -47,3 +47,5 @@ position = Vector2( 96, 192 )
 [node name="LevelExit" parent="." instance=ExtResource( 2 )]
 position = Vector2( -32, 128 )
 rotation = -1.5708
+path = "Levels/3-2"
+current = "Levels/3-1"
