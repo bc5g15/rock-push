@@ -4,11 +4,13 @@ extends Button
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export(String) var level = ""
-
+const completeColour = Color("#44ff00")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_check_locked()
+	if LevelUnlocker.isComplete(text):
+		print("Level Done: " + text)
+		self_modulate = completeColour
 
 func _check_locked():
 	if text:
