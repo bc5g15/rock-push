@@ -38,6 +38,7 @@ script = ExtResource( 3 )
 shape = SubResource( 2 )
 
 [node name="KnockParticles" type="CPUParticles2D" parent="."]
+z_index = 2
 emitting = false
 amount = 3
 lifetime = 0.3

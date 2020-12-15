@@ -57,6 +57,7 @@ shape = SubResource( 3 )
 
 [node name="DustCloud" type="CPUParticles2D" parent="."]
 position = Vector2( 8, 8 )
+z_index = 2
 emitting = false
 lifetime = 1.5
 one_shot = true
