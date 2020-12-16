@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://MenuShift.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Menu/LevelSelect.tscn" type="PackedScene" id=2]
@@ -8,7 +8,8 @@
 [ext_resource path="res://Assets/UI/round_navigation_white_48dp.png" type="Texture" id=6]
 [ext_resource path="res://Assets/UI/round_play_arrow_white_48dp.png" type="Texture" id=7]
 [ext_resource path="res://fontTheme.tres" type="Theme" id=8]
-
+[ext_resource path="res://Assets/UI/round_star_rate_white_48dp.png" type="Texture" id=9]
+[ext_resource path="res://TopScripts/CompleteStar.gd" type="Script" id=10]
 
 [sub_resource type="ShortCut" id=1]
 
@@ -285,6 +286,8 @@ __meta__ = {
 }
 
 [node name="LevelSelect" parent="LevelSelect" instance=ExtResource( 2 )]
+margin_left = -4.0
+margin_right = -4.0
 
 [node name="ScrollRightBtn" type="Button" parent="LevelSelect"]
 margin_left = 5.24408
@@ -293,6 +296,20 @@ margin_right = 65.2441
 margin_bottom = 35.9966
 theme = ExtResource( 8 )
 text = "To Title"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CompleteStar" type="TextureRect" parent="LevelSelect"]
+self_modulate = Color( 0.784314, 0.721569, 0.054902, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 96.0
+margin_top = -54.0
+margin_right = 192.0
+margin_bottom = 42.0
+texture = ExtResource( 9 )
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
