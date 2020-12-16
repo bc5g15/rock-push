@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Assets/Objects/tileset.png" type="Texture" id=1]
 
-
 [sub_resource type="TileSet" id=1]
 0/name = "SimpleFloor"
 0/texture = ExtResource( 1 )
