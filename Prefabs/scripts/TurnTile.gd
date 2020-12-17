@@ -9,6 +9,8 @@ onready var edge1 = $Edge1
 onready var edge2 = $Edge2
 onready var center = $Center
 
+onready var sfx = $Flip
+
 var expectedExit = null
 var tripped = false
 
@@ -42,4 +44,5 @@ func _on_Edge2_area_entered(_area):
 func _on_Center_area_entered(area):
 	if tripped && area.has_method('on_turn'):
 		area.call('on_turn', expectedExit)
+		sfx.play()
 	pass # Replace with function body.

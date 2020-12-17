@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Objects/SmallTurnTile-export2.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Scripts/TurnTile.gd" type="Script" id=2]
-
+[ext_resource path="res://Assets/Audio/Flip2.wav" type="AudioStream" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 1.0
@@ -46,6 +46,10 @@ __meta__ = {
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="Center"]
 shape = SubResource( 1 )
+
+[node name="Flip" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -5.943
 [connection signal="area_entered" from="Edge1" to="." method="_on_Edge1_area_entered"]
 [connection signal="area_entered" from="Edge2" to="." method="_on_Edge2_area_entered"]
 [connection signal="area_entered" from="Center" to="." method="_on_Center_area_entered"]

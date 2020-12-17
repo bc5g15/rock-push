@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Flip2.wav-d8cc2657ec4cb9eb29270d2f025ce005.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Flip2.wav"
+dest_files=[ "res://.import/Flip2.wav-d8cc2657ec4cb9eb29270d2f025ce005.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
