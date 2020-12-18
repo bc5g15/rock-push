@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Objects/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Scripts/LevelExit.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Audio/SuccessBlip2x.ogg" type="AudioStream" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 16, 24, 0, 24, 0, 0, 16, 0 )
@@ -162,4 +163,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 40, 16 )
 shape = SubResource( 7 )
+
+[node name="VictoryBlip" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
 [connection signal="body_entered" from="." to="." method="_on_LevelExit_body_entered"]
