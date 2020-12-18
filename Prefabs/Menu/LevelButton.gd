@@ -17,6 +17,7 @@ func _check_locked():
 		disabled = LevelUnlocker.isLocked(text)
 
 func _pressed():
+	FadeController.blip()
 	if text:
 		FadeController.fade_to_scene("res://Levels/" + text + ".tscn")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://MenuShift.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Menu/LevelSelect.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://fontTheme.tres" type="Theme" id=8]
 [ext_resource path="res://Assets/UI/round_star_rate_white_48dp.png" type="Texture" id=9]
 [ext_resource path="res://TopScripts/CompleteStar.gd" type="Script" id=10]
+[ext_resource path="res://TopScripts/ButtonBlip.gd" type="Script" id=11]
 
 [sub_resource type="ShortCut" id=1]
 
@@ -215,6 +216,7 @@ margin_bottom = 24.8811
 focus_neighbour_left = NodePath("../CreditsBtn")
 shortcut = SubResource( 1 )
 icon = ExtResource( 7 )
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -230,6 +232,7 @@ margin_right = 28.5
 margin_bottom = -8.24072
 theme = ExtResource( 8 )
 text = "Credits"
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -269,6 +272,7 @@ margin_left = -30.0
 margin_top = -54.0
 margin_right = 30.0
 icon = ExtResource( 6 )
+script = ExtResource( 11 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/ScrollDown = SubResource( 3 )
@@ -296,6 +300,7 @@ margin_right = 65.2441
 margin_bottom = 35.9966
 theme = ExtResource( 8 )
 text = "To Title"
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -10,5 +10,6 @@ func _ready():
 #func _process(delta):
 #	pass
 func _pressed():
+	FadeController.blip()
 	LevelUnlocker.unlock_all()
 	get_tree().call_group("LevelButtons", "refresh")

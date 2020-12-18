@@ -6,6 +6,8 @@ extends CanvasLayer
 # var b = "text"
 
 onready var animation = $AnimationPlayer
+onready var blip = $BlipSFX
+
 var callback = null
 var _path = ""
 var reset = false
@@ -36,3 +38,6 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		else:
 			Global.goto_scene(_path)
 		animation.play("FadeIn")
+
+func blip():
+	blip.play()
