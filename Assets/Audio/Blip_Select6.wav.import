@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Blip_Select6.wav-e7c87f6c722077b51568510625ae6f23.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Blip_Select6.wav"
+dest_files=[ "res://.import/Blip_Select6.wav-e7c87f6c722077b51568510625ae6f23.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
