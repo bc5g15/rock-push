@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://fontTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Prefabs/Menu/LevelButton.gd" type="Script" id=2]
 [ext_resource path="res://Prefabs/Menu/UnlockAllButton.gd" type="Script" id=3]
+[ext_resource path="res://Assets/UI/baseline_lock_white_48dp.png" type="Texture" id=4]
 
 [node name="LevelSelect" type="Control"]
 anchor_right = 1.0
@@ -131,14 +132,15 @@ script = ExtResource( 2 )
 
 [node name="LevelUnlock" type="Button" parent="."]
 anchor_left = 1.0
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -127.057
-margin_top = -30.602
-margin_right = -8.05688
-margin_bottom = 34.398
+anchor_bottom = 1.0
+margin_left = -124.0
+margin_top = -58.0
+margin_right = -2.0
+margin_bottom = -4.0
 text = "Unlock All"
+icon = ExtResource( 4 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
