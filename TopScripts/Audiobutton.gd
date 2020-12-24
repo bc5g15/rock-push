@@ -5,12 +5,14 @@ extends TextureButton
 # var a = 2
 # var b = "text"
 
+export(int) var audioBus = 0
+
 onready var aOn = $AudioOn
 onready var aOff = $AudioOff
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var isMute = AudioServer.is_bus_mute(2)
+	var isMute = AudioServer.is_bus_mute(audioBus)
 	aOn.visible = !isMute
 	aOff.visible = isMute
 	pressed = isMute
@@ -24,5 +26,5 @@ func _ready():
 func _on_AudioButton_toggled(button_pressed):
 	aOn.visible = !button_pressed
 	aOff.visible = button_pressed
-	AudioServer.set_bus_mute(2, button_pressed)
+	AudioServer.set_bus_mute(audioBus, button_pressed)
 	pass # Replace with function body.
