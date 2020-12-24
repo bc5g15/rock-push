@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SuccessBlip3.ogg-fc8bae59cdbfd6d662b28fcf68a8e510.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/SuccessBlip3.ogg"
+dest_files=[ "res://.import/SuccessBlip3.ogg-fc8bae59cdbfd6d662b28fcf68a8e510.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

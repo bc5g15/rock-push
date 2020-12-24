@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Objects/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/scripts/LevelExit.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Audio/SuccessBlip2x.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Audio/SuccessBlip3.ogg" type="AudioStream" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 16, 24, 0, 24, 0, 0, 16, 0 )
