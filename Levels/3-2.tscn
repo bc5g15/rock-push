@@ -26,6 +26,14 @@ position = Vector2( 48, 96 )
 [node name="Obstructions" parent="." instance=ExtResource( 3 )]
 tile_data = PoolIntArray( 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0 )
 
+[node name="TurnTile" parent="." instance=ExtResource( 10 )]
+position = Vector2( 240, 160 )
+rotation = 3.14159
+
+[node name="TurnTile2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 240, 96 )
+rotation = 1.5708
+
 [node name="Rock" parent="." instance=ExtResource( 5 )]
 position = Vector2( 64, 144 )
 
@@ -44,11 +52,3 @@ rotation = -1.5708
 [node name="DoorPair2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 128, 128 )
 rotation = -1.5708
-
-[node name="TurnTile" parent="." instance=ExtResource( 10 )]
-position = Vector2( 240, 160 )
-rotation = 3.14159
-
-[node name="TurnTile2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 240, 96 )
-rotation = 1.5708
