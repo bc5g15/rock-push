@@ -21,7 +21,7 @@ margin_top = 6.30673
 margin_right = 142.67
 margin_bottom = 159.307
 custom_fonts/font = SubResource( 1 )
-text = "Rock
+text = "Boulder
 Puzzle
 Dungeon"
 __meta__ = {
