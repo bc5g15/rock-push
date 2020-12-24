@@ -55,5 +55,6 @@ color_ramp = SubResource( 3 )
 [node name="Thud" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
 volume_db = -10.0
+bus = "SFX"
 [connection signal="fall_in_hole" from="DoorCollide" to="." method="_on_DoorCollide_fall_in_hole"]
 [connection signal="turned" from="DoorCollide" to="." method="_on_DoorCollide_turned"]

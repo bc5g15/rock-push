@@ -50,6 +50,7 @@ shape = SubResource( 1 )
 [node name="Flip" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
 volume_db = -5.943
+bus = "SFX"
 [connection signal="area_entered" from="Edge1" to="." method="_on_Edge1_area_entered"]
 [connection signal="area_entered" from="Edge2" to="." method="_on_Edge2_area_entered"]
 [connection signal="area_entered" from="Center" to="." method="_on_Center_area_entered"]

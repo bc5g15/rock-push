@@ -166,4 +166,5 @@ shape = SubResource( 7 )
 
 [node name="VictoryBlip" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
+bus = "SFX"
 [connection signal="body_entered" from="." to="." method="_on_LevelExit_body_entered"]

@@ -111,8 +111,10 @@ angle_random = 1.0
 
 [node name="SmallSmashSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
+bus = "SFX"
 
 [node name="BigSmashSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
+bus = "SFX"
 [connection signal="body_entered" from="FrontSmash" to="." method="_on_FrontSmash_body_entered"]
 [connection signal="body_entered" from="BackSmash" to="." method="_on_BackSmash_body_entered"]
