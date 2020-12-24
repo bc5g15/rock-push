@@ -335,7 +335,6 @@ margin_left = -80.0
 margin_top = 8.0
 margin_right = -48.0
 margin_bottom = 40.0
-audioBus = 2
 [connection signal="pressed" from="TitleScreen/ScrollLeftBtn" to="." method="_on_ScrollUpBtn_pressed"]
 [connection signal="pressed" from="TitleScreen/CreditsBtn" to="." method="_on_CreditsBtn_pressed"]
 [connection signal="pressed" from="Credits/FromCredits" to="." method="_on_FromCredits_pressed"]
