@@ -19,6 +19,7 @@ onready var unlock = $LevelSelect/LevelSelect/LevelUnlock
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	FadeController.play_menu_music()
 	# Change what we switch to
 	if Global.menu == "TITLE":
 		disable_credits_focus()

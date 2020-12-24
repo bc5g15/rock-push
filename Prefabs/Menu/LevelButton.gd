@@ -19,6 +19,7 @@ func _check_locked():
 func _pressed():
 	FadeController.blip()
 	if text:
+		FadeController.play_game_music()
 		FadeController.fade_to_scene("res://Levels/" + text + ".tscn")
 
 
