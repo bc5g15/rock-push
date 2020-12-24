@@ -7,6 +7,8 @@ extends CanvasLayer
 
 onready var animation = $AnimationPlayer
 onready var blip = $BlipSFX
+onready var gameMusic = $GameMusic
+onready var menuMusic = $MenuMusic
 
 var callback = null
 var _path = ""
@@ -20,7 +22,13 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
+func play_menu_music():
+	gameMusic.stop()
+	menuMusic.play()
+	
+func play_game_music():
+	menuMusic.stop()
+	gameMusic.play()
 
 func fade_to_scene(path):
 	animation.play("FadeOut")
