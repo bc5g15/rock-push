@@ -17,7 +17,7 @@
 [sub_resource type="ShortCut" id=1]
 
 [sub_resource type="DynamicFont" id=2]
-size = 26
+size = 24
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
@@ -274,7 +274,8 @@ custom_fonts/font = SubResource( 2 )
 text = "Font - VT323-Regular from Google Fonts
 Icons from Material.IO
 Tileset/Character from TinyRPGDungeon by Ansimuz 
- www.ansimuz.com"
+ www.ansimuz.com
+The rest done by bc5g15"
 align = 1
 valign = 1
 
