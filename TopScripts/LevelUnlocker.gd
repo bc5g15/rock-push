@@ -53,3 +53,9 @@ func all_complete():
 		if completeLevels[level] == false:
 			return false
 	return true
+
+func all_unlocked():
+	for level in levels:
+		if levels[level] == false:
+			return false
+	return true
