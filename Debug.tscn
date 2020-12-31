@@ -31,7 +31,7 @@ position = Vector2( 112, 288 )
 [node name="Active Backdrop" type="Node2D" parent="."]
 
 [node name="Obstructions" parent="Active Backdrop" instance=ExtResource( 7 )]
-tile_data = PoolIntArray( 327702, 0, 0, 524300, 0, 0, 589836, 0, 0 )
+tile_data = PoolIntArray( 327702, 0, 0, 524300, 0, 0, 589836, 0, 0, 720902, 0, 0, 720904, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 80, 80 )
