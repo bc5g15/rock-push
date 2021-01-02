@@ -30,6 +30,10 @@ func play_game_music():
 	menuMusic.stop()
 	gameMusic.play()
 
+func stop_all_music():
+	menuMusic.stop()
+	gameMusic.stop()
+
 func fade_to_scene(path):
 	animation.play("FadeOut")
 	_path = path
