@@ -239,14 +239,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CompleteStar" type="TextureRect" parent="TitleScreen"]
+[node name="CompleteStar" type="TextureButton" parent="TitleScreen"]
 self_modulate = Color( 0.784314, 0.721569, 0.054902, 1 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -48.0
 margin_right = 48.0
 margin_bottom = 96.0
-texture = ExtResource( 9 )
+texture_normal = ExtResource( 9 )
 script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
