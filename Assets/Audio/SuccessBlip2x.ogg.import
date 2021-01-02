@@ -11,5 +11,5 @@ dest_files=[ "res://.import/SuccessBlip2x.ogg-d3ef3506c0e823423a6dab1d21ed28a9.o
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
